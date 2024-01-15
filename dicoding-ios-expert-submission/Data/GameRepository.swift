@@ -10,8 +10,8 @@ import Combine
 
 protocol GameRepositoryProtocol {
     func getGames() -> AnyPublisher<[GameModel], Error>
-    func getFavorite() -> AnyPublisher<[GameModel], Error>
-    func updateFavoriteGame(by id: Int) -> AnyPublisher<GameModel, Error>
+//    func getFavorite() -> AnyPublisher<[GameModel], Error>
+//    func updateFavoriteGame(by id: Int) -> AnyPublisher<GameModel, Error>
 }
 class GameRepository: NSObject {
     

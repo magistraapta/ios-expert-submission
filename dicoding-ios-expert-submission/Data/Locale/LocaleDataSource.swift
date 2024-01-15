@@ -12,8 +12,8 @@ import RealmSwift
 protocol LocaleDataSourceProtocol {
     func getGames() -> AnyPublisher<[GameEntity], Error>
     func addGames(from games: [GameEntity]) -> AnyPublisher<Bool, Error>
-    func getFavoriteGames() -> AnyPublisher<[GameEntity], Error>
-    func updateFavorite(id: Int) -> AnyPublisher<GameEntity, Error>
+//    func getFavoriteGames() -> AnyPublisher<[GameEntity], Error>
+//    func updateFavorite(id: Int) -> AnyPublisher<GameEntity, Error>
 }
 
 class LocaleDataSource: NSObject {
@@ -64,39 +64,39 @@ extension LocaleDataSource: LocaleDataSourceProtocol {
         }.eraseToAnyPublisher()
     }
     
-    func getFavoriteGames() -> AnyPublisher<[GameEntity], Error> {
-        return Future<[GameEntity], Error> { completion in
-            if let realm = self.realm {
-                let gameEntities = {
-                    realm.objects(GameEntity.self)
-                        .filter("favorite = \(true)")
-                        .sorted(byKeyPath: "name", ascending: true)
-                }()
-                completion(.success(gameEntities.toArray(ofType: GameEntity.self)))
-            } else {
-                completion(.failure(DatabaseError.InvalidInstance))
-            }
-        }.eraseToAnyPublisher()
-    }
+//    func getFavoriteGames() -> AnyPublisher<[GameEntity], Error> {
+//        return Future<[GameEntity], Error> { completion in
+//            if let realm = self.realm {
+//                let gameEntities = {
+//                    realm.objects(GameEntity.self)
+//                        .filter("favorite = \(true)")
+//                        .sorted(byKeyPath: "name", ascending: true)
+//                }()
+//                completion(.success(gameEntities.toArray(ofType: GameEntity.self)))
+//            } else {
+//                completion(.failure(DatabaseError.InvalidInstance))
+//            }
+//        }.eraseToAnyPublisher()
+//    }
     
-    func updateFavorite(id: Int) -> AnyPublisher<GameEntity, Error> {
-        return Future<GameEntity, Error> { completion in
-            if let realm = self.realm, let gameEntity = {
-                realm.objects(GameEntity.self).filter("id = \(id)")
-            }().first {
-                do {
-                    try realm.write {
-                        gameEntity.setValue(!gameEntity.favorite, forKey: "favorite")
-                    }
-                    completion(.success(gameEntity))
-                } catch {
-                    completion(.failure(DatabaseError.requestFailed))
-                }
-            } else {
-                completion(.failure(DatabaseError.InvalidInstance))
-            }
-        }.eraseToAnyPublisher()
-    }
+//    func updateFavorite(id: Int) -> AnyPublisher<GameEntity, Error> {
+//        return Future<GameEntity, Error> { completion in
+//            if let realm = self.realm, let gameEntity = {
+//                realm.objects(GameEntity.self).filter("id = \(id)")
+//            }().first {
+//                do {
+//                    try realm.write {
+//                        gameEntity.setValue(!gameEntity.favorite, forKey: "favorite")
+//                    }
+//                    completion(.success(gameEntity))
+//                } catch {
+//                    completion(.failure(DatabaseError.requestFailed))
+//                }
+//            } else {
+//                completion(.failure(DatabaseError.InvalidInstance))
+//            }
+//        }.eraseToAnyPublisher()
+//    }
     
     
 }

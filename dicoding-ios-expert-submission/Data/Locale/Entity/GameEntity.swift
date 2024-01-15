@@ -15,7 +15,6 @@ class GameEntity: Object {
     @objc dynamic var slug: String = ""
     @objc dynamic var released: String = ""
     @objc dynamic var rating: Double = 0.0
-    @objc dynamic var favorite: Bool = false
     
     override static func primaryKey() -> String? {
         return "id"

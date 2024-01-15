@@ -28,11 +28,9 @@ struct DetailView: View {
                     .font(.title2)
                     .bold()
                 
-                Image("heart")
+                Image(systemName: "heart")
                     .font(.title2)
-                    .onTapGesture {
-                        presenter.updateFavoriteGame()
-                    }
+                    
             }
 
         }

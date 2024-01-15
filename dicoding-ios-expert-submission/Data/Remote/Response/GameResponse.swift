@@ -36,6 +36,7 @@ struct GameEntryResponse: Identifiable ,Codable {
     let slug, name, released: String
     let backgroundImage: String
     let rating: Double
+    
 
 
     enum CodingKeys: String, CodingKey {

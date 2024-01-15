@@ -29,8 +29,5 @@ class Injection: NSObject {
         return DetailInteractor(repository: repository, game: game)
     }
     
-    func provideFavorite() -> FavoriteUseCase {
-        let repository = provideRepository()
-        return FavoriteInteractor(repository: repository)
-    }
+    
 }
