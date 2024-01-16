@@ -19,6 +19,7 @@ struct FavoriteView: View {
                         GameRow(game: item)
                     }
                 }
+                .listStyle(.plain)
             }
         }
         .onAppear {

@@ -19,11 +19,9 @@ struct ContentView: View {
                     }
                 FavoriteView()
                     .tabItem {
-                        Image(systemName: "house")
+                        Image(systemName: "heart.fill")
                     }
-                
             }
-            
         }
     }
 }
