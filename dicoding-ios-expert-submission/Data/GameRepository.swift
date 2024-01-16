@@ -10,8 +10,8 @@ import Combine
 
 protocol GameRepositoryProtocol {
     func getGames() -> AnyPublisher<[GameModel], Error>
-//    func getFavorite() -> AnyPublisher<[GameModel], Error>
-//    func updateFavoriteGame(by id: Int) -> AnyPublisher<GameModel, Error>
+    func getFavorite() -> AnyPublisher<[GameModel], Error>
+    func updateFavoriteGame(by id: Int) -> AnyPublisher<GameModel, Error>
 }
 class GameRepository: NSObject {
     
@@ -53,16 +53,16 @@ extension GameRepository: GameRepositoryProtocol {
         }.eraseToAnyPublisher()
     }
     
-//    func getFavorite() -> AnyPublisher<[GameModel], Error> {
-//        return self.locale.getFavoriteGames()
-//            .map { GameMapper.mapGameEntitiesToDomains(input: $0)}
-//            .eraseToAnyPublisher()
-//    }
-//
-//    func updateFavoriteGame(by id: Int) -> AnyPublisher<GameModel, Error> {
-//        return self.locale.updateFavorite(id: id)
-//            .map { GameMapper.mapEntityToDomain(input: $0) }
-//            .eraseToAnyPublisher()
-//    }
+    func getFavorite() -> AnyPublisher<[GameModel], Error> {
+        return self.locale.getFavoriteGames()
+            .map { GameMapper.mapGameEntitiesToDomains(input: $0)}
+            .eraseToAnyPublisher()
+    }
+
+    func updateFavoriteGame(by id: Int) -> AnyPublisher<GameModel, Error> {
+        return self.locale.updateFavorite(id: id)
+            .map { GameMapper.mapEntityToDomain(input: $0) }
+            .eraseToAnyPublisher()
+    }
     
 }

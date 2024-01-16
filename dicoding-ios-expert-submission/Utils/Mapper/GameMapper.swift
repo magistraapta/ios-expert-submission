@@ -28,7 +28,7 @@ final class GameMapper {
       input gameEntities: [GameEntity]
     ) -> [GameModel] {
       return gameEntities.map { result in
-          return GameModel(id: result.id, slug: result.slug, name: result.name, released: result.released, backgroundImage: result.backgroundImage, rating: result.rating)
+          return GameModel(id: result.id, slug: result.slug, name: result.name, released: result.released, backgroundImage: result.backgroundImage, rating: result.rating, favorite: result.favorite)
       }
     }
 
@@ -43,7 +43,7 @@ final class GameMapper {
     }
     
     static func mapEntityToDomain(input gameEntity: GameEntity) -> GameModel {
-        return GameModel(id: gameEntity.id, slug: gameEntity.slug, name: gameEntity.name, released: gameEntity.released, backgroundImage: gameEntity.backgroundImage, rating: gameEntity.rating)
+        return GameModel(id: gameEntity.id, slug: gameEntity.slug, name: gameEntity.name, released: gameEntity.released, backgroundImage: gameEntity.backgroundImage, rating: gameEntity.rating, favorite: gameEntity.favorite)
     }
     
 }

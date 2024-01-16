@@ -16,6 +16,7 @@ class GameEntity: Object {
     @objc dynamic var slug = ""
     @objc dynamic var released = ""
     @objc dynamic var rating = 0.0
+    @objc dynamic var favorite = false
     
     
     

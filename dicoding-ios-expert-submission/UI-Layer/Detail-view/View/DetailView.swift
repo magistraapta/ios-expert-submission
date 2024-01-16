@@ -28,8 +28,19 @@ struct DetailView: View {
                     .font(.title2)
                     .bold()
                 
-                Image(systemName: "heart")
-                    .font(.title2)
+                Button {
+                    presenter.updateFavoriteGame()
+                } label: {
+                    if presenter.game.favorite {
+                        Image(systemName: "heart.fill")
+                            .font(.title2)
+                    } else {
+                        Image(systemName: "heart")
+                            .font(.title2)
+                    }
+                }
+
+                
                     
             }
 
