@@ -12,4 +12,5 @@ struct GameModel: Equatable, Identifiable {
     let slug, name, released: String
     let backgroundImage: String
     let rating: Double
+    var favorite: Bool = false
 }

@@ -29,6 +29,6 @@ class DetailInteractor: DetailUseCase {
 //    func updateFavorite() -> AnyPublisher<GameModel, Error> {
 //        return repository.updateFavoriteGame(by: game.id)
 //    }
-    
+//
     
 }

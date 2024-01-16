@@ -9,12 +9,15 @@ import Foundation
 import RealmSwift
 
 class GameEntity: Object {
-    @objc dynamic var id: Int = 0
-    @objc dynamic var name: String = ""
-    @objc dynamic var backgroundImage: String = ""
-    @objc dynamic var slug: String = ""
-    @objc dynamic var released: String = ""
-    @objc dynamic var rating: Double = 0.0
+    
+    @objc dynamic var id = 0
+    @objc dynamic var name = ""
+    @objc dynamic var backgroundImage = ""
+    @objc dynamic var slug = ""
+    @objc dynamic var released = ""
+    @objc dynamic var rating = 0.0
+    
+    
     
     override static func primaryKey() -> String? {
         return "id"

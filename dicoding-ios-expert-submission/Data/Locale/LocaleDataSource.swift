@@ -78,7 +78,7 @@ extension LocaleDataSource: LocaleDataSourceProtocol {
 //            }
 //        }.eraseToAnyPublisher()
 //    }
-    
+//
 //    func updateFavorite(id: Int) -> AnyPublisher<GameEntity, Error> {
 //        return Future<GameEntity, Error> { completion in
 //            if let realm = self.realm, let gameEntity = {

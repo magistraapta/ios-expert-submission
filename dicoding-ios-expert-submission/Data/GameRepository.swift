@@ -58,7 +58,7 @@ extension GameRepository: GameRepositoryProtocol {
 //            .map { GameMapper.mapGameEntitiesToDomains(input: $0)}
 //            .eraseToAnyPublisher()
 //    }
-//    
+//
 //    func updateFavoriteGame(by id: Int) -> AnyPublisher<GameModel, Error> {
 //        return self.locale.updateFavorite(id: id)
 //            .map { GameMapper.mapEntityToDomain(input: $0) }

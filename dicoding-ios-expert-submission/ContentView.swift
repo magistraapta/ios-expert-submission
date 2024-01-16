@@ -11,7 +11,14 @@ struct ContentView: View {
     @EnvironmentObject var homePresenter: HomePresenter
     var body: some View {
         NavigationStack {
-            HomeView(vm: homePresenter)
+            TabView {
+                HomeView(vm: homePresenter)
+                    .tabItem {
+                        Image(systemName: "house")
+                    }
+                
+            }
+            
         }
     }
 }
