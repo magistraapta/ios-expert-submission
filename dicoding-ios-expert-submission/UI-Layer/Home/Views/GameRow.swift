@@ -18,7 +18,10 @@ struct GameRow: View {
                     .frame(width: 200)
                     .cornerRadius(12)
             } placeholder: {
-                ProgressView()
+                Rectangle()
+                    .foregroundColor(.secondary)
+                    .frame(width: 200, height: 100)
+                    .cornerRadius(12)
             }
             
             VStack (alignment: .leading, spacing:  12){

@@ -21,6 +21,10 @@ struct ContentView: View {
                     .tabItem {
                         Image(systemName: "heart.fill")
                     }
+                ProfileView()
+                    .tabItem {
+                        Image(systemName: "person")
+                    }
             }
         }
     }

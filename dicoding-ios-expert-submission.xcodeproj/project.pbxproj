@@ -19,6 +19,8 @@
 		FE0956492B5274BE00ABD5EA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FE0956482B5274BE00ABD5EA /* Alamofire */; };
 		FE09564C2B52750100ABD5EA /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = FE09564B2B52750100ABD5EA /* Realm */; };
 		FE09564E2B52750100ABD5EA /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FE09564D2B52750100ABD5EA /* RealmSwift */; };
+		FE0F5DAD2B579BAD00B35BB0 /* FavoriteRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0F5DAC2B579BAD00B35BB0 /* FavoriteRouter.swift */; };
+		FE0F5DB02B579C7000B35BB0 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0F5DAF2B579C7000B35BB0 /* ProfileView.swift */; };
 		FE46CEB22B53B8EB006ED73E /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE46CEB12B53B8EB006ED73E /* HomeRouter.swift */; };
 		FE46CEC12B53C8F6006ED73E /* GameRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE46CEC02B53C8F6006ED73E /* GameRow.swift */; };
 		FE46CED02B54E19E006ED73E /* DetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE46CECF2B54E19E006ED73E /* DetailUseCase.swift */; };
@@ -69,6 +71,8 @@
 		FE09562F2B5271E200ABD5EA /* dicoding_ios_expert_submissionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dicoding_ios_expert_submissionUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FE0956422B5273BF00ABD5EA /* RemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSource.swift; sourceTree = "<group>"; };
 		FE0956452B5273D100ABD5EA /* GameResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResponse.swift; sourceTree = "<group>"; };
+		FE0F5DAC2B579BAD00B35BB0 /* FavoriteRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRouter.swift; sourceTree = "<group>"; };
+		FE0F5DAF2B579C7000B35BB0 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		FE46CEB12B53B8EB006ED73E /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		FE46CEC02B53C8F6006ED73E /* GameRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRow.swift; sourceTree = "<group>"; };
 		FE46CECF2B54E19E006ED73E /* DetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUseCase.swift; sourceTree = "<group>"; };
@@ -214,6 +218,22 @@
 			path = Response;
 			sourceTree = "<group>";
 		};
+		FE0F5DAB2B579BA200B35BB0 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FE0F5DAC2B579BAD00B35BB0 /* FavoriteRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		FE0F5DAE2B579C6600B35BB0 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				FE0F5DAF2B579C7000B35BB0 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		FE46CEAF2B53B75C006ED73E /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +272,7 @@
 		FE46CFA32B56DB32006ED73E /* Favorite-View */ = {
 			isa = PBXGroup;
 			children = (
+				FE0F5DAB2B579BA200B35BB0 /* Router */,
 				FE46CFA72B56DC80006ED73E /* Views */,
 				FE46CFA42B56DB4B006ED73E /* Presenter */,
 			);
@@ -345,6 +366,7 @@
 		FEC81ABF2B53AC3800CC14EF /* UI-Layer */ = {
 			isa = PBXGroup;
 			children = (
+				FE0F5DAE2B579C6600B35BB0 /* Profile */,
 				FE46CFA32B56DB32006ED73E /* Favorite-View */,
 				FE46CED22B54E265006ED73E /* Detail-view */,
 				FE46CEAF2B53B75C006ED73E /* Home */,
@@ -524,6 +546,7 @@
 				FEC81AB82B53A2FC00CC14EF /* GameMapper.swift in Sources */,
 				FE46CFA62B56DB55006ED73E /* FavoritePresenter.swift in Sources */,
 				FE46CEDB2B54F8C9006ED73E /* FavoriteInteractor.swift in Sources */,
+				FE0F5DAD2B579BAD00B35BB0 /* FavoriteRouter.swift in Sources */,
 				FEC81AB52B53A17400CC14EF /* GameModel.swift in Sources */,
 				FEC81AAC2B5394AE00CC14EF /* LocaleDataSource.swift in Sources */,
 				FE46CEC12B53C8F6006ED73E /* GameRow.swift in Sources */,
@@ -531,6 +554,7 @@
 				FE0956432B5273BF00ABD5EA /* RemoteDataSource.swift in Sources */,
 				FE46CED72B54E2C8006ED73E /* DetailPresenter.swift in Sources */,
 				FE0956462B5273D100ABD5EA /* GameResponse.swift in Sources */,
+				FE0F5DB02B579C7000B35BB0 /* ProfileView.swift in Sources */,
 				FEC81AC42B53AC5800CC14EF /* HomePresenter.swift in Sources */,
 				FE46CFA92B56DC95006ED73E /* FavoriteView.swift in Sources */,
 				FE46CED02B54E19E006ED73E /* DetailUseCase.swift in Sources */,

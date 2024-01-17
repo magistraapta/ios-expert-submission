@@ -10,19 +10,35 @@ import SwiftUI
 struct HomeView: View {
     @ObservedObject var vm: HomePresenter = .init(homeUseCase: Injection.init().provideHome())
     var body: some View {
-        List{
-            ForEach(vm.games){ item in
-                vm.linkBuilder(for: item) {
-                    GameRow(game: item)
+        VStack {
+            Text("Game List")
+                .font(.title)
+                .bold()
+            Spacer()
+            if vm.games.isEmpty {
+                VStack{
+                    Image("error-image")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 300)
+                    Text("No data")
                 }
-                
+            } else {
+                List{
+                    ForEach(vm.games){ item in
+                        vm.linkBuilder(for: item) {
+                            GameRow(game: item)
+                        }
+                        
+                    }
+                }
+                .listStyle(.plain)
             }
+            Spacer()
         }
-        .listStyle(.plain)
         .onAppear{
             vm.getGames()
         }
-        .navigationTitle("game list")
     }
 }
 
