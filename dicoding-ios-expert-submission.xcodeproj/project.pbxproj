@@ -408,6 +408,8 @@
 			packageReferences = (
 				FE0956472B5274BE00ABD5EA /* XCRemoteSwiftPackageReference "Alamofire" */,
 				FE09564A2B52750100ABD5EA /* XCRemoteSwiftPackageReference "realm-swift" */,
+				FE0F5E862B5CFB6E00B35BB0 /* XCRemoteSwiftPackageReference "modularization-game-package" */,
+				FE0F5E872B5CFB7B00B35BB0 /* XCRemoteSwiftPackageReference "modularization-core-package" */,
 			);
 			productRefGroup = FE0956102B5271E100ABD5EA /* Products */;
 			projectDirPath = "";
@@ -797,6 +799,22 @@
 			repositoryURL = "https://github.com/realm/realm-swift.git";
 			requirement = {
 				branch = master;
+				kind = branch;
+			};
+		};
+		FE0F5E862B5CFB6E00B35BB0 /* XCRemoteSwiftPackageReference "modularization-game-package" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/magistraapta/modularization-game-package";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		FE0F5E872B5CFB7B00B35BB0 /* XCRemoteSwiftPackageReference "modularization-core-package" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/magistraapta/modularization-core-package";
+			requirement = {
+				branch = main;
 				kind = branch;
 			};
 		};
