@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 import SwiftUI
+import Game
 
 
 class HomePresenter: ObservableObject {
@@ -16,7 +17,7 @@ class HomePresenter: ObservableObject {
     private let homeUseCase: HomeUseCase
     private var router = HomeRouter()
     
-    @Published var games: [GameModel] = []
+    @Published var games: [GameModuleDomain] = []
     @Published var isLoading: Bool = false
     @Published var errorMessage: String = ""
     
@@ -41,7 +42,7 @@ class HomePresenter: ObservableObject {
         .store(in: &cancellables)
     }
     
-    func linkBuilder<Content: View>(for game: GameModel, @ViewBuilder content: () -> Content) -> some View {
+    func linkBuilder<Content: View>(for game: GameModuleDomain, @ViewBuilder content: () -> Content) -> some View {
         NavigationLink(destination: router.makeDetailView(for: game)) {
             content()
         }

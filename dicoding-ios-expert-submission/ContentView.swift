@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Game
 
 struct ContentView: View {
     @EnvironmentObject var homePresenter: HomePresenter
@@ -33,7 +34,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(HomePresenter(homeUseCase: Injection.init().provideHome()))
-            .environmentObject(FavoritePresenter(favoriteUseCase: Injection.init().provideFavorite()))
+            .environmentObject(HomePresenter(homeUseCase: GameInjection.init().provideHome()))
+            .environmentObject(FavoritePresenter(favoriteUseCase: GameInjection.init().provideFavorite()))
     }
 }

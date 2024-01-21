@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
+import Game
 
 struct HomeView: View {
-    @ObservedObject var vm: HomePresenter = .init(homeUseCase: Injection.init().provideHome())
+    @ObservedObject var vm: HomePresenter = .init(homeUseCase: GameInjection.init().provideHome())
     var body: some View {
         VStack {
             Text("Game List")

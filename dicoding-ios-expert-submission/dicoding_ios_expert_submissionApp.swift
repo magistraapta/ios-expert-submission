@@ -6,11 +6,12 @@
 //
 
 import SwiftUI
+import Game
 
 @main
 struct dicoding_ios_expert_submissionApp: App {
-    let homePresenter = HomePresenter(homeUseCase: Injection.init().provideHome())
-    let favoritePresenter = FavoritePresenter(favoriteUseCase: Injection.init().provideFavorite())
+    let homePresenter = HomePresenter(homeUseCase: GameInjection.init().provideHome())
+    let favoritePresenter = FavoritePresenter(favoriteUseCase: GameInjection.init().provideFavorite())
     var body: some Scene {
         WindowGroup {
             ContentView()

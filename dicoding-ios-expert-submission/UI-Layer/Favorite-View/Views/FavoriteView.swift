@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
+import Game
 
 struct FavoriteView: View {
-    @ObservedObject var presenter: FavoritePresenter = .init(favoriteUseCase: Injection.init().provideFavorite())
+    @ObservedObject var presenter: FavoritePresenter = .init(favoriteUseCase: GameInjection.init().provideFavorite())
     var body: some View {
         VStack{
             Text("Favorite List")

@@ -7,13 +7,14 @@
 
 import Foundation
 import Combine
+import Game
 
-class DetailPresenter: ObservableObject {
+public class DetailPresenter: ObservableObject {
     
     private var cancellables: Set<AnyCancellable> = []
     private var detailUseCase: DetailUseCase
     
-    @Published var game: GameModel
+    @Published var game: GameModuleDomain
     @Published var isLoading: Bool = false
     @Published var errorMessage: String = ""
     

@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 import SwiftUI
+import Game
 
 class FavoritePresenter: ObservableObject {
     
@@ -15,7 +16,7 @@ class FavoritePresenter: ObservableObject {
     private let favoriteUseCase: FavoriteUseCase
     private var router = FavoriteRouter()
     
-    @Published var favoriteGame: [GameModel] = []
+    @Published var favoriteGame: [GameModuleDomain] = []
     @Published var errorMessage: String = ""
     @Published var isLoading: Bool = false
     @Published var isError: Bool = false
@@ -42,7 +43,7 @@ class FavoritePresenter: ObservableObject {
             .store(in: &cancellables)
       }
     
-    func linkBuilder<Content: View>(for game: GameModel, @ViewBuilder content: () -> Content) -> some View {
+    func linkBuilder<Content: View>(for game: GameModuleDomain, @ViewBuilder content: () -> Content) -> some View {
         NavigationLink(destination: router.makeDetailView(for: game)) {
             content()
         }

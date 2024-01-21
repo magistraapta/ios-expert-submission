@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
+import Game
 
 struct GameRow: View {
-    var game: GameModel
+    var game: GameModuleDomain
     var body: some View {
         HStack {
             AsyncImage(url: URL(string: game.backgroundImage)) { image in
@@ -36,9 +37,9 @@ struct GameRow: View {
     }
 }
 
-struct GameRow_Previews: PreviewProvider {
-    static var previews: some View {
-        let game = GameModel(id: 1, slug: "gta-v", name: "gta v", released: "2014", backgroundImage: "https://media.rawg.io/media/games/20a/20aa03a10cda45239fe22d035c0ebe64.jpg", rating: 4.9)
-        GameRow(game: game)
-    }
-}
+//struct GameRow_Previews: PreviewProvider {
+//    static var previews: some View {
+//        let game = GameModuleDomain(id: 1, slug: "gta-v", name: "gta v", released: "2014", backgroundImage: "https://media.rawg.io/media/games/20a/20aa03a10cda45239fe22d035c0ebe64.jpg", rating: 4.9)
+//        GameRow(game: game)
+//    }
+//}
